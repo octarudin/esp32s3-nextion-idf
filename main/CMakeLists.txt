@@ -1,3 +1,11 @@
-idf_component_register(SRCS "main.c"
-                    REQUIRES esp_driver_uart esp_driver_gpio
-                    INCLUDE_DIRS ".")
+idf_component_register(
+    SRCS 
+        "main.c"
+        "nextion/nextion.c"
+    INCLUDE_DIRS 
+        "."
+        "nextion"
+    REQUIRES 
+        esp_driver_uart 
+        esp_driver_gpio
+)
